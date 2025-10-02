@@ -21,3 +21,13 @@ nav#topmenu a{
     text-decoration: none;
     color: #fff;
 }
+first#chán {
+    text-decoration: line-through;
+    color: red;
+}
+cười.thường{
+    color: magenta;
+}
+tiếp.thường{
+    color: darkgoldenrod;
+}
