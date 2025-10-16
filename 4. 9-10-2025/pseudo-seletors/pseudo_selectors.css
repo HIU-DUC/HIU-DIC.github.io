@@ -3,7 +3,7 @@ a:hover{
     text-decoration: underline overline;
 }
 
-a:visited{
+b:visited{
     color: #D48F29;
 }
 
