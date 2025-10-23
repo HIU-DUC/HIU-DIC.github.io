@@ -1,10 +1,12 @@
 a:hover{
-    color: #D48F29;
+    color: #fa7665;
     text-decoration: underline overline;
+    
 }
 
+
 b:visited{
-    color: #D48F29;
+    color: red;
 }
 
 
@@ -37,7 +39,7 @@ tr:nth-child(2n+1) {
 }
 
 
-p:nth-of-type(2){
+c:nth-of-type(4){
     background: #95313b;
     color: #fff;
 }
