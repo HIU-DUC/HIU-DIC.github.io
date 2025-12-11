@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ôn tập ISV2017</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Sách</a>
+        <a href="#">Tác giả</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+    <button onclick="toggleMenu()">Ẩn/Hiện Menu</button>
+    <button onclick="ChangeColor()">Đổi màu nền Menu</button>
+    <script>
+        function toggleMenu(){
+            const nav=document.getElementById('mainNav');
+            nav.style.display=nav.style.display =='none' ? 'block' : 'none';
+        }
+        let isGreen = false;
+        function ChangeColor(){
+            const nav=document.getElementById('mainNav');
+            nav.style.backgroundColor = isGreen ? "#333" : "green";
+            isGreen = !isGreen;
+        }
+    </script>
+
+
+
+    <table id="tableID">
+        <tr>
+            <th>Tên linh kiện</th>
+            <th>Giá</th>
+            <th>Đánh giá &Star;</th>
+        </tr>
+        <tr>
+            <td>RAM DDR4 8GB</td>
+            <td>800000</td>
+            <td>4.0/5</td>
+        </tr>
+        <tr>
+            <td>CPU Intel &trade; Corei5</td>
+            <td>5000000</td>
+            <td>4.5/5</td>
+        </tr>
+        <tr>
+            <td>Ổ cứng SSD 256GB</td>
+            <td>1200000</td>
+            <td>4.8/5</td>
+        </tr>
+    </table>
+    <button onclick="changeColor()">Đổi màu chữ</button>
+    <button onclick="changeBackground()">Đổi màu nền bảng</button>
+    <button onclick="sortTable()">Xếp theo giá</button>
+    <script>
+        isBlue=false;
+        isPink=false;
+        function changeColor(){
+            const table=document.getElementById("tableID");
+            table.style.color=isBlue? "blue" : "black";
+            isBlue= !isBlue;
+        }
+        function changeBackground(){
+            const table=document.getElementById("tableID");
+            table.style.backgroundColor=isPink? "pink" : "white";
+            isPink= !isPink;
+        }
+        function sortTable(){
+            const table = document.getElementById("tableID");
+            const rows=Array.from(table.rows).slice(1);
+            rows.sort((a,b) => {
+                const priceA = parseInt(a.cells[1].innerText);
+                const priceB = parseInt(b.cells[1].innerText);
+                return priceA-priceB;
+            });
+            rows.forEach(row => table.appendChild(row));
+        }
+
+    </script>
+</body>
+</html>

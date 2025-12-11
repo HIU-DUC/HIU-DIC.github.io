@@ -1,0 +1,17 @@
+nav {
+    background-color: #333;
+    padding:15px;
+    text-align: left;
+    
+}
+a {
+    color:red;
+    text-decoration:none;
+    margin: 0 10px;
+}
+nav a:hover{
+    color:yellow;
+}
+#mainNav{
+    transition: all 1000ms ease;
+}
